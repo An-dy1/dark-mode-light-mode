@@ -38,12 +38,11 @@
 }
 
 .title,
-.text-input {
+.text-input-container {
     padding-top: 6rem;
 }
 
-#toggle-btn,
-#update-text-btn {
+#toggle-btn {
     font-size: 30px;
     cursor: pointer;
     text-align: center;
@@ -52,8 +51,40 @@
     right: 30px;
 }
 
+.text-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.light #update-text {
+    color: #444;
+}
+
+.dark #update-text {
+    color: #fff;
+}
+
+#update-text {
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 1.5rem;
+}
+
+#update-text-btn {
+    font-size: 30px;
+    cursor: pointer;
+    text-align: center;
+}
+
 .light #toggle-btn,
-.dark #update-text-btn {
+.light #update-text-btn {
     background-color: #444;
     color: #fff;
 }
