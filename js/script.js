@@ -12,25 +12,23 @@ function enableDarkMode() {
 }
 
 function disableDarkMode() {
-    body.classList.remove('dark');
+    document.body.classList.remove('dark');
     darkMode = false;
 }
 
-window.addEventListener('load', () => {
-    updateBtn.addEventListener('click', () => {
-        displayText.innerText = updateText.value;
-        updateText.value = '';
-    });
-});
+function updateTextOnClick() {
+    displayText.innerText = updateText.value;
+    updateText.value = '';
+}
 
-toggleBtn.onclick = function() {
+function showAlert() {
+    window.alert(displayText.innerText);
+}
+
+function toggleLightDark() {
     if (darkMode === false) {
         enableDarkMode();
     } else {
         disableDarkMode();
     }
-};
-
-function showAlert() {
-    window.alert(displayText.innerText);
 }

@@ -12,7 +12,7 @@
 </head>
 
 <body class="light">
-    <button id="toggle-btn">Change mode</button>
+    <button id="toggle-btn" onclick="toggleLightDark()">Change mode</button>
 
     <div class="content">
         <div class="title">
@@ -20,10 +20,12 @@
         </div>
         <div class="sub-container">
             <input id="update-text" type="text" placeholder="Change the text..." value="" />
-            <button class="standard-btn" id="update-text-btn">Update</button>
+            <button class="standard-btn" id="update-text-btn" onclick="updateTextOnClick()">
+          Update
+        </button>
         </div>
         <div class="sub-container">
-            <button class="standard-btn" id="alert-btn" onClick="showAlert()">
+            <button class="standard-btn" id="alert-btn" onclick="showAlert()">
           Alert me
         </button>
         </div>
