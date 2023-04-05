@@ -1,21 +1,20 @@
-let body = document.body;
 const toggleBtn = document.getElementById('toggle-btn');
 const updateBtn = document.getElementById('update-text-btn');
 const displayText = document.getElementById('display-text');
 const updateText = document.getElementById('update-text');
 const alertBtn = document.getElementById('alert-btn');
 
-let darkMode = 'disabled';
+let darkMode = false;
 
-const enableDarkMode = () => {
-    body.classList.add('dark');
-    darkMode = 'enabled';
-};
+function enableDarkMode() {
+    document.body.classList.add('dark');
+    darkMode = true;
+}
 
-const disableDarkMode = () => {
+function disableDarkMode() {
     body.classList.remove('dark');
-    darkMode = 'disabled';
-};
+    darkMode = false;
+}
 
 window.addEventListener('load', () => {
     updateBtn.addEventListener('click', () => {
@@ -25,7 +24,7 @@ window.addEventListener('load', () => {
 });
 
 toggleBtn.onclick = function() {
-    if (darkMode === 'disabled') {
+    if (darkMode === false) {
         enableDarkMode();
     } else {
         disableDarkMode();
