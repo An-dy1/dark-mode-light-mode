@@ -38,7 +38,7 @@
 }
 
 .title,
-.text-input-container {
+.sub-container {
     padding-top: 6rem;
 }
 
@@ -51,7 +51,7 @@
     right: 30px;
 }
 
-.text-input-container {
+.sub-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,20 +77,20 @@
     padding: 1.5rem;
 }
 
-#update-text-btn {
+.standard-btn {
     font-size: 30px;
     cursor: pointer;
     text-align: center;
 }
 
 .light #toggle-btn,
-.light #update-text-btn {
+.light .standard-btn {
     background-color: #444;
     color: #fff;
 }
 
 .dark #toggle-btn,
-.dark #update-text-btn {
+.dark .standard-btn {
     background-color: #fff;
     color: #444;
 }

@@ -3,6 +3,7 @@ const toggleBtn = document.getElementById('toggle-btn');
 const updateBtn = document.getElementById('update-text-btn');
 const displayText = document.getElementById('display-text');
 const updateText = document.getElementById('update-text');
+const alertBtn = document.getElementById('alert-btn');
 
 let darkMode = 'disabled';
 
@@ -16,7 +17,14 @@ const disableDarkMode = () => {
     darkMode = 'disabled';
 };
 
-toggleBtn.onclick = (event) => {
+window.addEventListener('load', () => {
+    updateBtn.addEventListener('click', () => {
+        displayText.innerText = updateText.value;
+        updateText.value = '';
+    });
+});
+
+toggleBtn.onclick = function() {
     if (darkMode === 'disabled') {
         enableDarkMode();
     } else {
@@ -24,7 +32,6 @@ toggleBtn.onclick = (event) => {
     }
 };
 
-updateBtn.onclick = (event) => {
-    displayText.innerText = updateText.value;
-    updateText.value = '';
-};
+function showAlert() {
+    window.alert(displayText.innerText);
+}
